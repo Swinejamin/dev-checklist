@@ -1,0 +1,56 @@
+{
+  "projectList" : {
+    "349187923ujkldsf" : {
+      "completed" : 5,
+      "count" : 8,
+      "name" : "SE Clark"
+    }
+  },
+  "projects" : {
+    "349187923ujkldsf" : {
+      "categories" : {
+        "kladsf73u298oij" : {
+          "sections" : {
+            "-KkHQi9TimZJRZJ7Vdkf" : {
+              "completion" : 0,
+              "items" : {
+                "-KkHS8082l_iWhwqMtJ5" : {
+                  "completion" : false,
+                  "detail" : "Trindlasfkdsjf"
+                },
+                "-KkHSCd8iPyrKowzwjrz" : {
+                  "completion" : false,
+                  "detail" : "Check mobile compatibility"
+                },
+                "-KkHUlsf3KeuBkRGJ03s" : {
+                  "completion" : false,
+                  "detail" : "Testing"
+                },
+                "-KkH_mt2TMFnJwk-R0_b" : {
+                  "completion" : false,
+                  "detail" : "jeepers"
+                }
+              },
+              "title" : "New section"
+            },
+            "-KkHSFwRuq5SuwyVaXEO" : {
+              "completion" : 0,
+              "items" : {
+                "-KkHXEytzusG_jrERMUV" : {
+                  "completion" : false,
+                  "detail" : "swag, bro"
+                }
+              },
+              "title" : "Tingles"
+            },
+            "-KkHSHY6JTHTuIcfIIZ2" : {
+              "completion" : 0,
+              "title" : "Pringles"
+            }
+          },
+          "title" : "frontend"
+        }
+      }
+    }
+  }
+}
