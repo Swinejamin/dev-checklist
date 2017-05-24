@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Subheader from 'material-ui/Subheader';
-import DialogWrapper from '../DialogWrapper/DialogWrapper';
 import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
@@ -72,8 +71,8 @@ class Section extends React.Component {
         const addConfig = {
             title: `Add a new checklist item to the ${this.props.section.title} category`,
             actions: [<FlatButton onTouchTap={comp.props.closeDialog} label="cancel"/>,
-                <RaisedButton label="Add Section" onTouchTap={comp.handleAdd.bind(comp)}/>],
-            inputs: [<TextField onChange={comp.handleInput.bind(comp)} key="1"/>]
+                <RaisedButton label="Add Item" onTouchTap={comp.handleAdd.bind(comp)}/>],
+            inputs: [<TextField onChange={comp.handleInput.bind(comp)} key="1" name="newItem"/>]
         };
         return (
             <div key={this.props.ind} >
