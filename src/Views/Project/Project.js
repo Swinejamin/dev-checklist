@@ -4,6 +4,9 @@ import {database} from '../../config/database';
 import './Project.css';
 import Category from './Category/Category'
 import Dialog from 'material-ui/Dialog'
+import {Tabs, Tab} from 'material-ui/Tabs'
+// import More from 'material-ui/svg-icons/navigation/more-vert';
+// import AppBar from 'material-ui/AppBar';
 
 
 class Project extends React.Component {
@@ -65,23 +68,28 @@ class Project extends React.Component {
         const categories = this.state.project ? Object.entries(this.state.project.categories) : null;
         return (
             <main className="Project-main main">
-                {
-                    this.state.project ?
-                        categories.map((category) => {
-                            return (<Category category={category[1]}
-                                              key={category[0]}
-                                              dataref={this.state.dataref}
-                                              projectRef={this.state.projectRef}
-                                              localRef={`projects/${this.state.projectRef}/categories/${category[0]}`}
-                                              handleAdd={this.handleAdd.bind(this)}
-                                              handleDelete={this.handleDelete.bind(this)}
-                                              closeDialog={this.closeDialog.bind(this)}
-                                              setupDialog={this.setupDialog.bind(this)}
-                                              loaded={this.state.loaded}
-                            />);
-                        }) :
-                        null
-                }
+                <Tabs>
+                    {
+                        this.state.project ?
+                            categories.map((category, key) => {
+                                return (
+                                    <Tab key={key} label={category[1].title}>
+                                        <Category category={category[1]}
+                                                  key={category[0]}
+                                                  dataref={this.state.dataref}
+                                                  projectRef={this.state.projectRef}
+                                                  localRef={`projects/${this.state.projectRef}/categories/${category[0]}`}
+                                                  handleAdd={this.handleAdd.bind(this)}
+                                                  handleDelete={this.handleDelete.bind(this)}
+                                                  closeDialog={this.closeDialog.bind(this)}
+                                                  setupDialog={this.setupDialog.bind(this)}
+                                                  loaded={this.state.loaded}/>
+                                    </Tab>
+                                );
+                            }) :
+                            null
+                    }
+                </Tabs>
                 <Dialog open={this.state.dialogOpen} actions={this.state.actions}
                         onRequestClose={this.closeDialog} title={this.state.dialogTitle}>
                     {this.state.dialogText}
