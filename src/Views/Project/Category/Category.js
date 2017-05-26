@@ -4,7 +4,7 @@ import Section from '../Section/Section';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
-
+import './category.css';
 
 class Category extends React.Component {
     constructor(props) {
@@ -43,15 +43,24 @@ class Category extends React.Component {
 
     render() {
         const comp = this;
-        const sectionList = Object.entries(this.props.category.sections);
+        const category = this.props.category;
+
+        const sectionList =  category.sections ? Object.entries(this.props.category.sections) : [];
+
         const addConfig = {
             title: `Add a new section to the ${this.props.category.title} category`,
             actions: [<FlatButton onTouchTap={comp.props.closeDialog} label="cancel"/>,
                 <RaisedButton label="Add Section" onTouchTap={comp.handleAdd.bind(comp)}/>],
             inputs: [<TextField onChange={comp.handleInput.bind(comp)} key="1"/>]
         };
+        // const deleteConfig = {
+        //     title: `Delete the ${this.props.category.title} category?`,
+        //     actions: [<FlatButton onTouchTap={comp.props.closeDialog} label="cancel"/>,
+        //         <RaisedButton label="Add Section" onTouchTap={comp.handleAdd.bind(comp)}/>],
+        //     inputs: [<TextField onChange={comp.handleInput.bind(comp)} key="1"/>]
+        // };
         return this.props.loaded ? (
-            <div>
+            <div className='columns'>
                 {
                     sectionList.map((section) => {
                             const key = section[0];
