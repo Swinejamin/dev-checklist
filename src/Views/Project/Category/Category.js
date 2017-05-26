@@ -51,7 +51,7 @@ class Category extends React.Component {
             title: `Add a new section to the ${this.props.category.title} category`,
             actions: [<FlatButton onTouchTap={comp.props.closeDialog} label="cancel"/>,
                 <RaisedButton label="Add Section" onTouchTap={comp.handleAdd.bind(comp)}/>],
-            inputs: [<TextField onChange={comp.handleInput.bind(comp)} key="1"/>]
+            inputs: [<TextField onChange={comp.handleInput.bind(comp)} key="1" name="newCategory"/>]
         };
         // const deleteConfig = {
         //     title: `Delete the ${this.props.category.title} category?`,
