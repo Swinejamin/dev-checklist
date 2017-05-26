@@ -1,0 +1,24 @@
+
+.columns {
+    column-count: 1;
+    page-break-inside: avoid;
+}
+
+@media screen and (min-width: 786px) {
+    .columns {
+        column-count: 2;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .columns {
+        column-count: 3;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .columns {
+        column-count: 4;
+    }
+}
+
