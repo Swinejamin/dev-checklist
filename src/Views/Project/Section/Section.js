@@ -102,7 +102,7 @@ class Section extends React.Component {
         };
 
         return (
-            <div key={this.props.ind}>
+            <div key={this.props.ind} style={{pageBreakInside: 'avoid'}}>
                 <List>
                     <AppBar title={section.title} showMenuIconButton={false} iconElementRight={<Menu/>}/>
                     {/*<Subheader>{section.title || 'Title'}</Subheader>*/}
