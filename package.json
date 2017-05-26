@@ -2,7 +2,7 @@
   "name": "dev-checklist",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://bmswine/dev.cybernautic.com/checklist",
+  "homepage": "http://bmswine.dev.cybernautic.com/checklist",
 
   "dependencies": {
     "firebase": "^3.9.0",
