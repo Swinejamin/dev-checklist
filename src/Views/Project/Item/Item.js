@@ -110,7 +110,7 @@ class Item extends React.Component {
         });
         return (
             <ListItem key={this.props.ind} primaryText={item.detail} leftCheckbox={<Checkbox />}
-                      insetChildren={true} nestedItems={nest}>
+                      insetChildren={true} nestedItems={nest} primaryTogglesNestedList>
 
                 <DialogWrapper open={this.state.addDialogOpen} handleClose={this.handleAddDialogClose.bind(this)}
                                handleInput={this.handleInput.bind(this)}
